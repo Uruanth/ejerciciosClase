@@ -1,0 +1,16 @@
+
+Q
+java:S3740"/Provide the parametrized type for this generic.(åÏŞ¢úÿÿÿÿ8ÿÓÑ/
+\
+java:S1075	"ARefactor your code to get this URI from a customizable parameter.(ƒ¸ü±ıÿÿÿÿ
+W	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ø·œÔ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(À‡òïüÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(ˆµÈ”úÿÿÿÿ8˜¼ŠÑ/
+E
+java:S2093;"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+V
+java:S2259C"@A "NullPointerException" could be thrown; "bw" is nullable here.(÷¹ª
+V
+java:S2259*"@A "NullPointerException" could be thrown; "br" is nullable here.(µÖ€’

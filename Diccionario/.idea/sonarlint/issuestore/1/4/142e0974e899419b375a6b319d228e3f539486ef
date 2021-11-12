@@ -1,0 +1,24 @@
+
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ß¬ÄÓ
+6
+java:S3010" Remove this assignment of "dic".(É‹ÕŸ
+K
+java:S2209"5Change this instance-reference to a static reference.(É‹ÕŸ
+P
+java:S2209"5Change this instance-reference to a static reference.(¡†Êãÿÿÿÿÿ
+K
+java:S2209"5Change this instance-reference to a static reference.(³ˆ­Ó
+P
+java:S2209"5Change this instance-reference to a static reference.(Ñˆíƒýÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(•§˜”ÿÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(ã“Ì–ûÿÿÿÿ
+P
+java:S2209"5Change this instance-reference to a static reference.(¶›áŸÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(âü¼™
+P
+java:S2209"5Change this instance-reference to a static reference.(ó¸ˆÿøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(âü¼™
+Q	java:S125"<This block of commented-out lines of code should be removed.(Îõéú

@@ -1,6 +1,8 @@
 package persistencia;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Documento {
 
@@ -16,10 +18,12 @@ public class Documento {
         }
     }
 
-    public String leer() {
+    public Map leer() {
         FileReader fr = null;
         BufferedReader br = null;
-        String text = "";
+        String[] text={};
+        Map<String, String> dic = new HashMap<>();
+
         try {
             fr = new FileReader(archivo);
             br = new BufferedReader(fr);
@@ -27,7 +31,8 @@ public class Documento {
             String cont;
 
             while ((cont = br.readLine()) != null) {
-                text += cont;
+                text = cont.split(",");
+                System.out.println("text = " + text[0] + " "+text[1]);
             }
 
         } catch (Exception e) {
@@ -43,8 +48,9 @@ public class Documento {
 
         }
 
+        System.out.println("dic = " + dic.values());
 
-        return text;
+        return dic;
     }
 
     public boolean guardar() {
