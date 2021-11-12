@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Clase usada para crear el documento si no existe, leerlo o escribir en el.
+ * En este caso se usa un archivo de tipo "txt"
+ */
 public class Documento {
 
     //Si quieren usar una ruta completa puede ser asi en windows
@@ -17,6 +21,9 @@ public class Documento {
     private FileWriter fw = null;
     private BufferedWriter bw = null;
 
+    /**
+     * Constructor, al usarlo verifica la existencia del documento, sino lo crea
+     */
     public Documento() {
         if (!archivo.exists()) {
             try {
@@ -27,6 +34,10 @@ public class Documento {
         }
     }
 
+    /**
+     * Metodo para leer el documento y retornar un objeto de tipo map
+     * @return Map
+     */
     public Map leer() {
 
         String[] text = {};
@@ -60,6 +71,12 @@ public class Documento {
         return dic;
     }
 
+
+    /**
+     * Este metodo recibe un Map y lo guarda en lineas de "key,value" en el documento,
+     * cada linea es una pareja de clave valor
+     * @param dic
+     */
     public void guardar(Map dic) {
 
         Set line = dic.keySet();
