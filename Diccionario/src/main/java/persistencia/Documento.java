@@ -7,6 +7,9 @@ import java.util.Set;
 
 public class Documento {
 
+    //Si quieren usar una ruta completa puede ser asi en windows
+    //private File archivo = new File("D:\\Codigo\\Intellij\\Diccionario\\diccionario.txt");
+
     private File archivo = new File("diccionario.txt");
 
     private BufferedReader br = null;
