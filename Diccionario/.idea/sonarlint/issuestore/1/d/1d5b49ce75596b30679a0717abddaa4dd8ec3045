@@ -1,16 +1,0 @@
-
-Y
-java:S1854#"7Remove this useless assignment to local variable "key".(„¢º¬øÿÿÿÿ8••¢Ñ/
-Z
-java:S1854+"8Remove this useless assignment to local variable "sear".(²áÂ­øÿÿÿÿ8ö†¢Ñ/
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¾û¡Àûÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Õˆ‹…ıÿÿÿÿ
-S	java:S106""9Replace this use of System.out or System.err by a logger.(ƒ÷–îúÿÿÿÿ
-N	java:S106%"9Replace this use of System.out or System.err by a logger.(Ú‘™
-N	java:S106*"9Replace this use of System.out or System.err by a logger.(„êÂ
-N	java:S106-"9Replace this use of System.out or System.err by a logger.(¼Šå¿
-S	java:S1060"9Replace this use of System.out or System.err by a logger.(¤¿Íşÿÿÿÿ
-M	java:S1066"9Replace this use of System.out or System.err by a logger.(òÇÙm
-Z	java:S1069"9Replace this use of System.out or System.err by a logger.(¥ÙĞŞúÿÿÿÿ8Ûå¢Ñ/
-U
-java:S1128"3Remove this unused import 'persistencia.Documento'.(Üô‘¢ùÿÿÿÿ8Ö¡ ¢Ñ/

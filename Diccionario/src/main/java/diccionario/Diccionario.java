@@ -54,7 +54,7 @@ public class Diccionario {
 
     /**
      * Guarda todos los cambios en el objeto Map en el archivo
-     * @param dic<Map>
+     * @param dic<Map>  
      */
     public void guardarCambios(Map dic){
         Documento documento = new Documento();
