@@ -36,9 +36,54 @@ public class Documento {
 
     /**
      * Metodo para leer el documento y retornar un objeto de tipo map
+     *
      * @return Map
      */
-    public Map leer() {
+    public Map<String, String> leer() throws IOException {
+
+        String[] text;
+        Map<String, String> dic = new HashMap<>();
+
+        fr = new FileReader(archivo);
+        br = new BufferedReader(fr);
+
+        String cont;
+        while ((cont = br.readLine()) != null) {
+            text = cont.split(",");
+            dic.put(text[0], text[1]);
+        }
+        br.close();
+        fr.close();
+
+        return dic;
+    }
+
+
+    /**
+     * Este metodo recibe un Map y lo guarda en lineas de "key,value" en el documento,
+     * cada linea es una pareja de clave valor
+     *
+     * @param dic
+     */
+    public void guardar(Map<String, String> dic) throws IOException {
+
+        fw = new FileWriter(archivo);
+        bw = new BufferedWriter(fw);
+        dic.forEach((k, v) -> {
+            String auxString = k + "," + v + "\n";
+            try {
+                bw.write(auxString);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        bw.close();
+        fw.close();
+    }
+}
+/*
+ public Map leer() {
 
         String[] text = {};
         Map<String, String> dic = new HashMap<>();
@@ -72,11 +117,7 @@ public class Documento {
     }
 
 
-    /**
-     * Este metodo recibe un Map y lo guarda en lineas de "key,value" en el documento,
-     * cada linea es una pareja de clave valor
-     * @param dic
-     */
+
     public void guardar(Map dic) {
 
         Set line = dic.keySet();
@@ -106,4 +147,4 @@ public class Documento {
             }
         }
     }
-}
+*/

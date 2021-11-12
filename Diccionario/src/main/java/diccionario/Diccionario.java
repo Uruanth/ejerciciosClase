@@ -2,6 +2,7 @@ package diccionario;
 
 import persistencia.Documento;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -19,7 +20,7 @@ public class Diccionario {
     /**
      * Constructor para inicializar el atributo map con los datos del archivo
      */
-    public Diccionario() {
+    public Diccionario() throws IOException {
       Documento documento = new Documento();
       this.dic = documento.leer();
     }
@@ -54,9 +55,9 @@ public class Diccionario {
 
     /**
      * Guarda todos los cambios en el objeto Map en el archivo
-     * @param dic<Map>  
+     * @param dic<Map>
      */
-    public void guardarCambios(Map dic){
+    public void guardarCambios(Map dic) throws IOException {
         Documento documento = new Documento();
         documento.guardar(dic);
     }
