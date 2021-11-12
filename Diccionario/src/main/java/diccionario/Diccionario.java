@@ -1,31 +1,37 @@
 package diccionario;
 
+import persistencia.Documento;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Diccionario {
 
-    static private Map<String, String> dic;
+    Logger logger = Logger.getLogger("MyLogger");
+    private Map<String, String> dic;
 
     public Diccionario() {
-        this.dic = new HashMap<>();
-        this.dic.put("hello", "hola");
-        this.dic.put("hell", "ola");
-        this.dic.put("helo", "hoa");
-        this.dic.put("ana", "ene");
-        this.dic.put("trece", "doce");
+      Documento documento = new Documento();
+      this.dic = documento.leer();
     }
 
-    public void crear(){
+    public void agregar(String key, String val){
+        this.dic.put(key, val);
 
-        for(String nn: this.dic.keySet()){
-            System.out.println(nn);
-        }
-        for(String nn: this.dic.values()){
-            System.out.println(nn);
-        }
-
-        //System.out.println(dic.keySet());
     }
 
+    public Map<String, String> getDic() {
+        return dic;
+    }
+
+    public String buscar(String key){
+        return this.dic.getOrDefault(key, "No se encontro");
+    }
+
+    public void guardarCambios(Map dic){
+        Documento documento = new Documento();
+        documento.guardar(dic);
+    }
 }

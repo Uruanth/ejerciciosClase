@@ -3,10 +3,16 @@ package persistencia;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Documento {
 
-    private File archivo = new File("D:\\Codigo\\Intellij\\Diccionario\\diccionario.txt");
+    private File archivo = new File("diccionario.txt");
+
+    private BufferedReader br = null;
+    private FileReader fr = null;
+    private FileWriter fw = null;
+    private BufferedWriter bw = null;
 
     public Documento() {
         if (!archivo.exists()) {
@@ -19,9 +25,8 @@ public class Documento {
     }
 
     public Map leer() {
-        FileReader fr = null;
-        BufferedReader br = null;
-        String[] text={};
+
+        String[] text = {};
         Map<String, String> dic = new HashMap<>();
 
         try {
@@ -32,7 +37,7 @@ public class Documento {
 
             while ((cont = br.readLine()) != null) {
                 text = cont.split(",");
-                System.out.println("text = " + text[0] + " "+text[1]);
+                dic.put(text[0], text[1]);
             }
 
         } catch (Exception e) {
@@ -48,20 +53,30 @@ public class Documento {
 
         }
 
-        System.out.println("dic = " + dic.values());
 
         return dic;
     }
 
-    public boolean guardar() {
-        FileWriter fw = null;
-        BufferedWriter bw = null;
+    public void guardar(Map dic) {
+
+        Set line = dic.keySet();
+
+
         try {
             fw = new FileWriter(archivo);
             bw = new BufferedWriter(fw);
-            bw.write("escribiendo algo");
+            dic.forEach((k, v) -> {
+                String auxString = k + "," + v + "\n";
+                try {
+                    bw.write(auxString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+
         } catch (Exception e) {
             e.printStackTrace();
+
         } finally {
             try {
                 bw.close();
@@ -69,13 +84,6 @@ public class Documento {
             } catch (Exception e1) {
                 e1.printStackTrace();
             }
-
-
         }
-
-
-        return false;
     }
-
-
 }
